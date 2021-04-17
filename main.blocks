@@ -15,7 +15,7 @@ f e f e 4 4 e b f 4 4 e e f . .
 . . . f f f f f e e e e . c c c 
 . . f f f f f f f f . . . c . . 
 . . f f f . . f f . . . . . . . 
-`</field><data>{"commentRefs":[],"fieldData":{"img":"cr3I(R?V,i)ZG_T|+_B."}}</data></block></value><next><block type="variables_set" id="m[$~Fr[v}im;5m0JK/._"><field name="VAR" id="Xqyu.10mLZ6B8*UTB`s(">leftSwordOutImg</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="screen_image_picker" id="m/]S/)okFH)EEzjjvd!."><field name="img">img`
+`</field><data>{"commentRefs":[],"fieldData":{"img":null}}</data></block></value><next><block type="variables_set" id="m[$~Fr[v}im;5m0JK/._"><field name="VAR" id="Xqyu.10mLZ6B8*UTB`s(">leftSwordOutImg</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="screen_image_picker" id="m/]S/)okFH)EEzjjvd!."><field name="img">img`
 . . . . . . . f f . . . . . . . 
 . . . . . f f 2 f f f f . . . . 
 . . . . f f 2 f e e e e f f . . 
@@ -32,7 +32,7 @@ d d c e d d 4 4 e 4 4 4 f . . .
 c c c . e e e e f f f f f . . . 
 . . c . . . f f f f f f f f . . 
 . . . . . . . f f . . f f f . . 
-`</field><data>{"commentRefs":[],"fieldData":{"img":"m/]S/)okFH)EEzjjvd!."}}</data></block></value><next><block type="variables_set" id="w.e1(Vj/*Qw{e5:YnqPX"><field name="VAR" id="7,hqO3$h3+dO$h~C{Fn.">rightFacingImg</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="screen_image_picker" id="3~@*b=F5On/ARf(o$hp*"><field name="img">img`
+`</field><data>{"commentRefs":[],"fieldData":{"img":null}}</data></block></value><next><block type="variables_set" id="w.e1(Vj/*Qw{e5:YnqPX"><field name="VAR" id="7,hqO3$h3+dO$h~C{Fn.">rightFacingImg</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="screen_image_picker" id="3~@*b=F5On/ARf(o$hp*"><field name="img">img`
 . . . . . . . . . . . . . . . . 
 . . . . . f f f f f f . . . . . 
 . . . f f e e e e f 2 f . . . . 
@@ -49,7 +49,7 @@ c c c . e e e e f f f f f . . .
 . . . f f f e e f 5 5 f f . . . 
 . . . f f f f f f f f f f . . . 
 . . . . f f . . . f f f . . . . 
-`</field><data>{"commentRefs":[],"fieldData":{"img":"3~@*b=F5On/ARf(o$hp*"}}</data></block></value><next><block type="variables_set" id="K:QL7%TIZUZ(Qd.ZNIB;"><field name="VAR" id="KR7N5=[w[L_UAL}^:MzU">leftFacingImg</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="screen_image_picker" id="Yk:QUu%7X!w2dsY^Uclm"><field name="img">img`
+`</field><data>{"commentRefs":[],"fieldData":{"img":null}}</data></block></value><next><block type="variables_set" id="K:QL7%TIZUZ(Qd.ZNIB;"><field name="VAR" id="KR7N5=[w[L_UAL}^:MzU">leftFacingImg</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="screen_image_picker" id="Yk:QUu%7X!w2dsY^Uclm"><field name="img">img`
 . . . . . . . . . . . . . . . . 
 . . . . . f f f f f f . . . . . 
 . . . . f 2 f e e e e f f . . . 
@@ -66,4 +66,4 @@ c c c . e e e e f f f f f . . .
 . . . f f 5 5 f e e f f f . . . 
 . . . f f f f f f f f f f . . . 
 . . . . f f f . . . f f . . . . 
-`</field><data>{"commentRefs":[],"fieldData":{"img":"Yk:QUu%7X!w2dsY^Uclm"}}</data></block></value></block></next></block></next></block></next></block></statement></block></xml>
+`</field><data>{"commentRefs":[],"fieldData":{"img":null}}</data></block></value></block></next></block></next></block></next></block></statement></block></xml>
