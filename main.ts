@@ -1,3 +1,20 @@
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (hero.isHittingTile(CollisionDirection.Bottom) || hero.isHittingTile(CollisionDirection.Right) || hero.isHittingTile(CollisionDirection.Left)) {
+        hero.vy = -200
+    }
+})
+controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
+    hero.setImage(leftFacingImg)
+})
+controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
+    hero.setImage(rightFacingImg)
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.collectibleRedCrystal, function (sprite, location) {
+    game.over(true)
+})
+let hero: Sprite = null
+let leftFacingImg: Image = null
+let rightFacingImg: Image = null
 let rightSwordOutImg = img`
     . . . . . . . f f . . . . . . . 
     . . . . f f f f 2 f f . . . . . 
@@ -34,7 +51,7 @@ let leftSwordOutImg = img`
     . . c . . . f f f f f f f f . . 
     . . . . . . . f f . . f f f . . 
     `
-let rightFacingImg = img`
+rightFacingImg = img`
     . . . . . . . . . . . . . . . . 
     . . . . . f f f f f f . . . . . 
     . . . f f e e e e f 2 f . . . . 
@@ -52,7 +69,7 @@ let rightFacingImg = img`
     . . . f f f f f f f f f f . . . 
     . . . . f f . . . f f f . . . . 
     `
-let leftFacingImg = img`
+leftFacingImg = img`
     . . . . . . . . . . . . . . . . 
     . . . . . f f f f f f . . . . . 
     . . . . f 2 f e e e e f f . . . 
@@ -69,38 +86,29 @@ let leftFacingImg = img`
     . . . f f 5 5 f e e f f f . . . 
     . . . f f f f f f f f f f . . . 
     . . . . f f f . . . f f . . . . 
-    
-    
     `
-
-let hero = sprites.create(rightFacingImg,SpriteKind.Player)
-controller.moveSprite(hero,100,0)
-
-controller.A.onEvent(ControllerButtonEvent.Pressed, function() {
-
-    if (hero.isHittingTile(CollisionDirection.Bottom)) {
-hero.vy = -200
-    }
-    
-
-})
-
-
-
-controller.left.onEvent(ControllerButtonEvent.Pressed, function() {
-  hero.setImage(leftFacingImg)  
-})
-
-
-controller.right.onEvent(ControllerButtonEvent.Pressed, function() {
-  hero.setImage(rightFacingImg)  
-})
-
-
-
+hero = sprites.create(rightFacingImg, SpriteKind.Player)
+controller.moveSprite(hero, 100, 0)
 tiles.setTilemap(tilemap`level1`)
-
-
 scene.cameraFollowSprite(hero)
 tiles.placeOnTile(hero, tiles.getTileLocation(5, 27))
 hero.ay = 300
+game.onUpdateInterval(100, function () {
+    if (hero.isHittingTile(CollisionDirection.Left) && hero.vy < 0) {
+        hero.ay = 0
+        hero.vy = 15
+        hero.setImage(leftSwordOutImg)
+    } else if (hero.isHittingTile(CollisionDirection.Right) && hero.vy < 0) {
+        hero.ay = 0
+        hero.vy = 15
+        hero.setImage(rightSwordOutImg)
+    } else {
+        hero.ay = 300
+    }
+    if (hero.image == leftSwordOutImg) {
+        hero.setImage(leftFacingImg)
+    }
+    if (hero.image == rightSwordOutImg) {
+        hero.setImage(rightFacingImg)
+    }
+})
