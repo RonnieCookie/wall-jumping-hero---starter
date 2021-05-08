@@ -104,11 +104,11 @@ game.onUpdateInterval(100, function () {
         hero.setImage(rightSwordOutImg)
     } else {
         hero.ay = 300
-    }
-    if (hero.image == leftSwordOutImg) {
-        hero.setImage(leftFacingImg)
-    }
-    if (hero.image == rightSwordOutImg) {
-        hero.setImage(rightFacingImg)
+        if (hero.image == rightSwordOutImg) {
+            hero.setImage(rightFacingImg)
+            if (hero.image == leftSwordOutImg) {
+                hero.setImage(leftFacingImg)
+            }
+        }
     }
 })
